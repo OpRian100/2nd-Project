@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Buy Now</title>
+        <link rel="shortcut icon" href="favicon2.ico" type="image/x-icon">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+            body{
+                text-align: center;
+                background-color: black;
+                color: white;
+                font-family: 'Italianno', cursive;
+                font-size: 30px;
+            }
+
+            .location{
+                width: 200px;
+                height: 50px;
+                cursor: pointer;
+                background-color: darkblue;
+                color: cyan;
+            }
+
+            .submit{
+                width: 200px;
+                height: 50px;
+                background-color: cyan;
+                cursor: pointer;
+                border: darkblue 2px solid;
+            }
+
+            form{
+                background-color: cyan;
+                width: 350px;
+                margin: auto;
+                padding: 15px;
+                border-radius: 7px;
+                
+            }
+        </style>
+    </head>
+    <html>
+        <body>
+        <form action="Session30{1}(1).html">
+            <p id="location"></p>
+        <input class="location" required type="submit" value="Get Your Location" onClick="showLocation()">
+        <script>
+            function showLocation(){
+            if(navigator.geolocation)
+            {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+        } 
+
+        function showPosition(position){
+            var loc = document.getElementById("location");  
+            loc.innerText = "Latitude = " +position.coords.latitude+
+            ", Longitude =" +position.coords.longitude;
+        } 
+        </script> <br> <br>
+
+            <label for="name">Name : </label>
+                <input placeholder="Enter Name" required type="text">
+                <br> <br><label for="e-mail">Enter E-Mail : </label>
+                <input placeholder="abc@gmail.com" required type="text">
+                <label for="credit Card or Pay on Delivery"></label><br> <br>
+                <input required disabled type="checkbox">Credit Card/Debit Card<br> <br>
+                <input required type="checkbox">Pay on Delivery <br> <br>
+                <br> <br><label for="password">Enter Password : </label>
+                <input placeholder="Enter Password" required type="password"><br> <br>
+                <label for="grade">Items : </label>
+                <input placeholder="Items" list="grade"> <br> <br> 
+                <datalist id="grade"> 
+                            <option value="Willow Cricket Bat Size 6 With 2 Balls"></option>
+                            <option value="Sunley Wooden Wicket"></option>
+                            <option value="Pink Leather Cricket Ball"></option>
+                            <option value="Fortnite for PS4"></option>
+                            <option value="Sony PlayStation 4 Pro 1TB Console - Black (PS4 Pro)"></option>
+                            <option value="Minecraft for PS4"></option>
+                            <option value="Spiderman for PS4"></option>
+                            <option value="Microsoft Xbox One S 1 TB"></option>
+                            <option value="Table Tennis Racket"></option>
+                </datalist> <br> <br>
+        <input type="submit" class="submit">
+        </form>
+        </body>
+    </html>
+</html>
